@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hello_menu_icon/navigator/ScreenA.dart';
+import 'package:hello_menu_icon/navigator/ScreenB.dart';
+import 'package:hello_menu_icon/navigator/ScreenC.dart';
+
 import 'menu/menu.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +15,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: MenuPage(), // note. Menu and drawer.
+      initialRoute: '/a', // note. Navigator.
+      routes: {
+        '/a': (context) => ScreenA(),
+        '/b': (context) => ScreenB(),
+        '/c': (context) => ScreenC(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }
