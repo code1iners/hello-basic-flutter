@@ -23,6 +23,12 @@ class Delegator extends StatelessWidget {
                 Navigator.pushNamed(context, '/page/1');
               },
             ),
+            OutlinedButton(
+              child: Text('Stateful'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/state');
+              },
+            ),
           ],
         ),
       ),
