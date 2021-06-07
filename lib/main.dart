@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_menu_icon/Delegator.dart';
+import 'package:hello_menu_icon/auth/auth.dart';
 import 'package:hello_menu_icon/navigator/PageOne.dart';
 import 'package:hello_menu_icon/navigator/PageTwo.dart';
 import 'package:hello_menu_icon/navigator/ScreenA.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/page/1': (context) => PageOne(),
         '/page/2': (context) => PageTwo(),
         '/state': (context) => StateFulWidgetExample(),
+        '/auth': (context) => AuthenticationExam(),
       },
       debugShowCheckedModeBanner: false,
     );
