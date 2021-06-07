@@ -19,6 +19,33 @@ class _StateFulWidgetExampleState extends State<StateFulWidgetExample> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Counter : $counter'),
+            SizedBox(
+              height: 10.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  child: Text('+'),
+                  onPressed: () {
+                    setState(() {
+                      counter++;
+                    });
+                  },
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
+                ElevatedButton(
+                  child: Text('-'),
+                  onPressed: () {
+                    setState(() {
+                      counter--;
+                    });
+                  },
+                ),
+              ],
+            ),
             OutlinedButton(
               child: Text('Initialize'),
               onPressed: () {
@@ -26,17 +53,9 @@ class _StateFulWidgetExampleState extends State<StateFulWidgetExample> {
                   counter = 0;
                 });
               },
-            )
+            ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.plus_one),
-        onPressed: () {
-          setState(() {
-            counter++;
-          });
-        },
       ),
     );
   }
